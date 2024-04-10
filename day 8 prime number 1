@@ -2,64 +2,12 @@
 
 print("Please enter a number (under 100)")
 number = int(input())
-#print(type(number))
 
-# split the number in half as a baseline? (you'll never get to 80 if you
-# multiply 41x2
-
-#let's say it's 80
-#split in half, 40 -- only int, use % to weed out odd divisions
-#try 40x2
-#only needs to hit once
-#87
-#can't split into even half, so no x2
-# Modulus
-# 87 % 3, even, not prime
-# basically do modulus for each value that's half of the number?
-'''
-for n in range(int(number/2)):
-    number_check = n + 1
-    #print(number_check)
-    print(f"We will divide {number} by {number_check}")
-    modulus_number = number % number_check
-    print(modulus_number)
-    divides_clean = False
-    if number_check > 1:
-        while divides_clean == False:
-            modulus_number = number % number_check
-            if modulus_number == 0:
-                divides_clean = True
-                print("true, composite")
- '''               
-
-#take number
-#can it divide cleanly by 2?
-#no? how sabout by 3?
-#until it's run until half//a quarter? of it's value
-#for our own education sake, let's start by having this program spit out
-#all the numbers that it DOES divide by.
-'''
-for n in range(int(number)):
-    number_check = n + 1
-    #print(number_check)
-    modulus_check = number % number_check
-    if modulus_check == 0:
-        more_math = int(number / number_check)
-        print(f"{number} is cleanly divisible by {number_check}, ({more_math} x {number_check})")
-'''
-# great, the code above works
-
-divides_clean = False
-#test_number = 1
 is_composite_number = 0
 
 for n in range(int(number)):
     number_check = n + 1
     #print(number_check)
-    #divides_clean = True
-    #print(f"Let's check and see if {number_check} is divisible.")
-    #print("if in any modulo operation, if has 0 remainder, it divides and is not prime.")
-    #print("if it has no modulo operations with 0 remainder, it is prime.")
     if number_check > 1 and number_check < number:
         modulus_check = number % number_check
         if modulus_check == 0:
